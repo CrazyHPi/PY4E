@@ -11,8 +11,21 @@ fh = open(fname)
 lst = list()
 for line in fh:
     for word in line.split():
-        if lst.__contains__(word):
+        # kinda cheaty?
+        # if lst.__contains__(word):
+        #     continue
+        if word in lst:
             continue
+
+        # flag = False
+        # for tmp in lst:
+        #     if word == tmp:
+        #         flag = True
+        #         break
+        #
+        # if flag:
+        #     continue
+
         lst.append(word)
 
 lst.sort()
